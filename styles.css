@@ -351,6 +351,107 @@ h2 {
   line-height: 1.6;
 }
 
+.performance-section {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 86% 18%, rgba(25, 198, 255, 0.16), transparent 30%),
+    linear-gradient(135deg, #07111f, #0d1624);
+  color: white;
+}
+
+.performance-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(420px, 1.1fr);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: center;
+}
+
+.performance-section .section-heading p:not(.eyebrow) {
+  color: rgba(238, 246, 255, 0.72);
+}
+
+.performance-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 26px;
+}
+
+.performance-tags span {
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.performance-cta {
+  margin-top: 28px;
+}
+
+.performance-tools {
+  display: grid;
+  gap: 16px;
+}
+
+.tool-card,
+.performance-result {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+.tool-card {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 22px;
+}
+
+.tool-mark {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius);
+  color: var(--night);
+  background: var(--lime);
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.tool-mark.jmeter {
+  color: white;
+  background: linear-gradient(135deg, var(--orange), var(--rose));
+}
+
+.tool-card h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.tool-card p,
+.performance-result p {
+  margin: 7px 0 0;
+  color: rgba(238, 246, 255, 0.68);
+  line-height: 1.55;
+}
+
+.performance-result {
+  padding: 22px;
+  border-color: rgba(183, 255, 18, 0.3);
+}
+
+.performance-result strong {
+  color: var(--lime);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
 .portfolio {
   background: var(--night);
   color: white;
@@ -639,7 +740,8 @@ textarea {
   }
 
   .split,
-  .cta-section {
+  .cta-section,
+  .performance-layout {
     grid-template-columns: 1fr;
   }
 
@@ -693,6 +795,16 @@ textarea {
 
   .process-list article {
     grid-template-columns: 1fr;
+  }
+
+  .tool-card {
+    grid-template-columns: 58px 1fr;
+  }
+
+  .tool-mark {
+    width: 58px;
+    height: 58px;
+    font-size: 19px;
   }
 
   .footer {
